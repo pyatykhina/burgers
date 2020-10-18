@@ -16,10 +16,10 @@ const webpackConfig = require('./webpack.config');
 const paths = {
     root: './build',
     templates: {
-        src: 'src/templates/index.pug'
+        src: 'src/templates/**/*.pug'
     },
     styles: { 
-        src: 'src/styles/main.scss'
+        src: 'src/styles/**/*.scss'
     },    
     images: {
         src: 'src/images/**/*.*',
@@ -30,20 +30,20 @@ const paths = {
         dest: 'build/fonts/'
     },
     scripts: {
-        src: 'src/scripts/main.js'
+        src: 'src/scripts/**/*.js'
     }
 }
 
 // pug
 function templates() {
-    return gulp.src(paths.templates.src)
+    return gulp.src('src/templates/index.pug')
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(paths.root))
 }
 
 // scss
 function styles() {
-    return gulp.src(paths.styles.src)
+    return gulp.src('src/styles/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(sourcemaps.write())
@@ -73,6 +73,7 @@ function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.images.src, images);
+    gulp.watch(paths.fonts.src, fonts);
     gulp.watch(paths.scripts.src, scripts);
 }
 
@@ -86,7 +87,7 @@ function server() {
 
 // scripts
 function scripts() {
-    return gulp.src(paths.scripts.src)
+    return gulp.src('src/scripts/main.js')
         .pipe(gulpWebpack(webpackConfig))
         .pipe(gulp.dest(paths.root))
 }
@@ -94,6 +95,6 @@ function scripts() {
 gulp.task('default', gulp.series(
     clear,
     gulp.parallel(styles, templates, images, fonts, scripts),
-    gulp.parallel(watch, server)
+    gulp.parallel(server, watch)
 ))
  

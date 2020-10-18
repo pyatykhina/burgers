@@ -1,3 +1,111 @@
-h1 {
-    color: red;
+.hero {
+    background-image: url('images/1/background.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+
+    &__container {
+        justify-content: flex-start;
+    }
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+
+        &-item {
+            color: $white;
+
+            &-link {
+                text-transform: uppercase;
+                color: $white;
+                font-size: rem(13px);
+                font-weight: 700;
+                display: inline-block;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &:after {
+                @include round(4px, $white);
+                content: ' ';
+                display: inline-block;
+                vertical-align: middle;
+                margin: 16px;
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $red;
+        border-radius: 4px;
+        min-width: 97px;
+        min-height: 35px;
+        transition: .5s;
+
+        &:hover {
+            background-color: darken($red, 5%);
+        }
+
+        &-link {
+            text-transform: uppercase;
+            color: $white;
+            font-size: rem(13px);
+            font-weight: 700;
+        }
+    }
+}
+
+.hero__content {
+    width: 100%;
+    display: flex;
+    align-items: center;;
+    flex-wrap: wrap;
+    padding-bottom: 75px;
+    margin: auto;
+
+    &-img {
+        flex-basis: 50%;
+    }
+
+    &-description {
+        flex-basis: 50%;
+
+        &-title {
+            @include header($yellow);
+            padding-top: 60px;
+        }
+
+        &-subtitle {
+            font-family: 'Lifehack';
+            font-size: rem(65px);
+            font-weight: normal;
+            line-height: 1;
+            letter-spacing: -2px;
+            color: $white;
+        }
+    }
+}
+
+.scroll {
+    padding-bottom: 40px;
 }

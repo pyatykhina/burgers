@@ -1,0 +1,14 @@
+@mixin round($size, $color) {
+    width: $size;
+    height: $size;
+    border-radius: $size/2;
+    background-color: $color;
+}
+
+@mixin header($color) {
+    font-family: 'Gagalin';
+    font-size: rem(72px);
+    font-weight: normal;
+    color: $color;
+    line-height: 1.42;
+}
