@@ -16,7 +16,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 15px;
+    padding-top: rem(15px);
 
     &__menu {
         display: flex;
@@ -43,7 +43,7 @@
                 content: ' ';
                 display: inline-block;
                 vertical-align: middle;
-                margin: 16px;
+                margin: rem(16px);
             }
 
             &:last-child:after {
@@ -57,9 +57,9 @@
         align-items: center;
         justify-content: center;
         background-color: $red;
-        border-radius: 4px;
-        min-width: 97px;
-        min-height: 35px;
+        border-radius: rem(4px);
+        min-width: rem(97px);
+        min-height: rem(35px);
         transition: .5s;
 
         &:hover {
@@ -80,7 +80,7 @@
     display: flex;
     align-items: center;;
     flex-wrap: wrap;
-    padding-bottom: 75px;
+    padding-bottom: rem(75px);
     margin: auto;
 
     &-img {
@@ -92,7 +92,7 @@
 
         &-title {
             @include header($yellow);
-            padding-top: 60px;
+            padding-top: rem(60px);
         }
 
         &-subtitle {
@@ -107,5 +107,5 @@
 }
 
 .scroll {
-    padding-bottom: 40px;
+    padding-bottom: rem(40px);
 }
