@@ -1,1 +1,3 @@
-console.log('Hello, world!');
+import { verticalAccordeon } from './sections/4.js'
+
+verticalAccordeon();
