@@ -28,6 +28,7 @@
             height: 100%;
             display: flex;
             position: relative;
+            overflow: hidden;
 
             &-background {
                 width: rem(80px);

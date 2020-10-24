@@ -1,0 +1,100 @@
+.contacts {
+    background-image: url('images/8/map.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    position: relative;
+
+    &__map {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100vw;
+        height: 100vh;
+
+        &-hint {
+            padding: rem(5px);
+            font-size: rem(13px);
+            font-weight: 700;
+            color: $red;
+        }
+
+        &-balloon {
+            padding: rem(5px);
+            font-size: rem(14px);
+            font-weight: 700;
+            line-height: 1.71;
+            color: $red;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-img {
+                margin-left: rem(15px);
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+
+    &__footer {
+        background-image: url('images/8/background.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+
+        min-height: rem(80px);
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-content {
+            width: 960px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &-destination {
+                &-address {
+                    font-size: rem(14px);
+                    font-weight: 300;
+                    color: $white;
+                    margin-bottom: rem(8px);
+                }
+    
+                &-phone {
+                    font-size: rem(14px);
+                    font-weight: 900;
+                    color: $red;
+                    display: flex;
+                    align-items: center;
+    
+                    &:before{
+                        content: ' ';
+                        height: rem(12px);
+                        width: rem(12px);
+                        background-image: url('images/8/phone.png');
+                        background-repeat: no-repeat;
+                        margin-right: rem(8px);
+                    }
+                }
+            }
+
+            &-socials {
+                &-icon {
+                    margin-left: rem(20px);
+                    fill: lighten($dark, 25%);
+                    height: rem(22px);
+                    width: rem(22px);
+                    transition: .3s;
+
+                    &:hover {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+    }
+}
