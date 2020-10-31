@@ -53,6 +53,53 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            &-dropdown {
+                position: absolute;
+                top: rem(-90px);
+                left: rem(90px);
+                border-radius: rem(3px);
+                padding: rem(25px);
+                background-color: rgba($white, 0.9);
+                display: none;
+                transition: .3s;
+                flex-direction: column;
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                    width: rem(230px);
+                    margin-bottom: rem(15px);
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &-img {
+                        margin-right: rem(25px);
+                    }
+
+                    &-name {
+                        font-size: rem(14px);
+                        font-weight: 700;
+                        line-height: 1;
+                        color: $dark;
+                        position: absolute;
+                        left: rem(70px);
+                    }
+
+                    &-weight {
+                        font-size: rem(14px);
+                        font-weight: 300;
+                        line-height: 1;
+                        color: $dark;
+                    }
+                }
             }
 
             &-calories {
@@ -121,4 +168,12 @@
             }
         }
     }
+}
+
+.activeDropdown {
+    display: flex;
+}
+
+.activeDropdownTrigger {
+    background-color: $red;
 }
