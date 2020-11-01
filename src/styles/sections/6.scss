@@ -53,6 +53,8 @@
                 }
 
                 &-text {
+                    max-height: rem(150px);
+                    overflow: hidden;
                     font-size: rem(14px);    
                     line-height: 1.5;
                     font-weight: 300;
@@ -81,6 +83,49 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.feedback__popup {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: rgba($dark, 0.95);
+
+    &-content {
+        max-width: rem(460px);
+        border-radius: rem(4px);
+        padding: rem(30px);
+        background-color: $white;
+        position: relative;
+
+        &-name {
+            font-family: 'Gagalin';
+            font-size: rem(14px);
+            font-weight: normal;
+            line-height: 1;
+            color: $dark;
+            margin-bottom: rem(30px);
+        }
+
+        &-text {
+            font-weight: 300;
+            color: $dark;
+            font-size: rem(14px);
+            line-height: 1.71;
+        }
+
+        &-close {
+            position: absolute;
+            top: rem(20px);
+            right: rem(20px);
+            cursor: pointer;
         }
     }
 }

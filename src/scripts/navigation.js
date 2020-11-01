@@ -1,4 +1,5 @@
 export function onePageScroll () {
+    const body = document.getElementsByTagName('body')[0];
     const container = document.getElementsByClassName('maincontent')[0];
     const sections = document.getElementsByClassName('section');
     let activeSection = document.getElementsByClassName('activeSection')[0];
@@ -52,7 +53,7 @@ export function onePageScroll () {
     }
 
     // scroll
-    document.addEventListener('mousewheel', function(e) {
+    body.addEventListener('mousewheel', function(e) {
         if (inScroll) {
             return;
         }
@@ -64,7 +65,7 @@ export function onePageScroll () {
     });
 
     // keyboard
-    document.addEventListener('keydown', function(e) {
+    body.addEventListener('keydown', function(e) {
         if (e.key == 'ArrowDown') {
             scrollDown();
         } else if (e.key == 'ArrowUp') {
