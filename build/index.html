@@ -402,7 +402,73 @@
             </ul>
           </div>
         </section>
-        <section class="section"></section>
+        <section class="section form">
+          <div class="container form__container">
+            <div class="form__content">
+              <h2 class="form__content-title">Закажите доставку</h2>
+              <form class="form__content-main">
+                <div class="form__column">
+                  <div class="form__column-row">
+                    <div class="form__column-row-item">
+                      <label class="form__column-row-label" for="name">Имя</label>
+                      <input class="form__column-row-input" type="text" name="name">
+                    </div>
+                    <div class="form__column-row-item">
+                      <label class="form__column-row-label" for="phone">Телефон</label>
+                      <input class="form__column-row-input" type="text" name="phone">
+                    </div>
+                  </div>
+                  <div class="form__column-row">
+                    <div class="form__column-row-item">
+                      <label class="form__column-row-label" for="street">Улица</label>
+                      <input class="form__column-row-input" type="text" name="street">
+                    </div>
+                  </div>
+                  <div class="form__column-row">
+                    <div class="form__column-row-item">
+                      <label class="form__column-row-label" for="house">Дом</label>
+                      <input class="form__column-row-input" type="text" name="house">
+                    </div>
+                    <div class="form__column-row-item">
+                      <label class="form__column-row-label" for="housing">Корпус</label>
+                      <input class="form__column-row-input" type="text" name="housing">
+                    </div>
+                    <div class="form__column-row-item">
+                      <label class="form__column-row-label" for="flat">Квартира</label>
+                      <input class="form__column-row-input" type="text" name="street">
+                    </div>
+                    <div class="form__column-row-item">
+                      <label class="form__column-row-label" for="floor">Этаж</label>
+                      <input class="form__column-row-input" type="text" name="floor">
+                    </div>
+                  </div>
+                </div>
+                <div class="form__column">
+                  <div class="form__column-row">
+                    <div class="form__column-row-item">
+                      <label class="form__column-row-label" for="message">Комментарий</label>
+                      <textarea class="form__column-row-input form__column-row-textarea" type="text" name="message"></textarea>
+                    </div>
+                  </div>
+                  <div class="form__column-row">
+                    <input class="form__column-row-radio" type="radio" name="radio" id="cash">
+                    <label class="form__column-row-label form__column-row-label-radio" for="cash">Потребуется сдача</label>
+                    <input class="form__column-row-radio" type="radio" name="radio" checked id="card">
+                    <label class="form__column-row-label form__column-row-label-radio" for="card">Оплата по карте</label>
+                  </div>
+                  <div class="form__column-row">
+                    <input class="form__column-row-checkbox" type="checkbox" name="checkbox" checked id="call">
+                    <label class="form__column-row-label form__column-row-label-checkbox" for="call">Не перезванивать</label>
+                  </div>
+                  <div class="form__column-row">
+                    <button class="form__column-row-button" type="submit">Заказать</button>
+                    <button class="form__column-row-button form__column-row-button-reset" type="reset">Очистить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
         <section class="section contacts">
           <div class="container contacts__container">
             <div class="contacts__map" id="map"></div>

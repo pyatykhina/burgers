@@ -1,1 +1,53 @@
-section.section
+section.section.form
+    .container.form__container
+        .form__content
+            h2.form__content-title Закажите доставку
+            form.form__content-main
+                .form__column
+                    .form__column-row
+                        .form__column-row-item
+                            label.form__column-row-label(for='name') Имя
+                            input.form__column-row-input(type='text', name='name')
+                        .form__column-row-item
+                            label.form__column-row-label(for='phone') Телефон
+                            input.form__column-row-input(type='text', name='phone')
+
+                    .form__column-row
+                        .form__column-row-item
+                            label.form__column-row-label(for='street') Улица
+                            input.form__column-row-input(type='text', name='street')
+
+                    .form__column-row
+                        .form__column-row-item
+                            label.form__column-row-label(for='house') Дом
+                            input.form__column-row-input(type='text', name='house')
+                        .form__column-row-item
+                            label.form__column-row-label(for='housing') Корпус
+                            input.form__column-row-input(type='text', name='housing')
+                        .form__column-row-item
+                            label.form__column-row-label(for='flat') Квартира
+                            input.form__column-row-input(type='text', name='street')
+                        .form__column-row-item
+                            label.form__column-row-label(for='floor') Этаж
+                            input.form__column-row-input(type='text', name='floor')
+
+                .form__column
+                    .form__column-row
+                        .form__column-row-item
+                            label.form__column-row-label(for='message') Комментарий
+                            textarea.form__column-row-input.form__column-row-textarea(type='text', name='message')
+
+                    .form__column-row
+                        input.form__column-row-radio(type='radio', name='radio', id="cash")
+                        label.form__column-row-label.form__column-row-label-radio(for='cash') Потребуется сдача
+                        input.form__column-row-radio(type='radio', name='radio', checked, id="card")
+                        label.form__column-row-label.form__column-row-label-radio(for='card') Оплата по карте
+
+                    .form__column-row
+                        input.form__column-row-checkbox(type='checkbox', name='checkbox', checked, id='call')
+                        label.form__column-row-label.form__column-row-label-checkbox(for='call') Не перезванивать
+                        
+                    .form__column-row
+                        button.form__column-row-button(type='submit') Заказать
+                        button.form__column-row-button.form__column-row-button-reset(type='reset') Очистить
+                        

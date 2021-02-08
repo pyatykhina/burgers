@@ -1,0 +1,183 @@
+.form {
+    background-image: url('images/7/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+
+.form__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-title {
+        @include header($yellow);
+        margin-bottom: rem(50px);
+    }
+
+    &-main {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.form__column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &-row {
+        display: flex;
+        width: 100%;
+        margin-bottom: rem(18px);
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-right: rem(20px);
+        }
+
+        &-label {
+            color: $white;
+            font-size: rem(14px);
+            font-weight: 300;
+            margin-bottom: rem(8px);
+
+            &-radio {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-right: rem(25px);
+                margin-top: rem(7px);
+
+                &:before{
+                    content:'';
+                    width: rem(15px);
+                    height: rem(15px);
+                    border-radius: 50%;
+                    margin-right: rem(8px);
+                    background-color: $white;
+                    display: inline-block;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+            
+                &:after{
+                    content:'';
+                    width: rem(7px);
+                    height: rem(7px);
+                    border-radius: 50%;
+                    background-color: $red;
+                    display: inline-block;
+                    position: absolute;
+                    top: rem(4px);
+                    left: rem(4px);
+                    transform: translateY(15%);
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            }
+
+            &-checkbox {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                &:before{
+                    content:'';
+                    width: rem(15px);
+                    height: rem(15px);
+                    margin-right: rem(10px);
+                    background-color: $white;
+                    display: inline-block;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+            
+                &:after{
+                    content:'';
+                    width: rem(15px);
+                    height: rem(15px);
+                    background: url('images/7/checkbox.png') center center no-repeat;                    display: inline-block;
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-input {
+            border: none;
+            border-radius: rem(5px);
+            font-weight: 300;
+            font-size: rem(14px);
+            color: #2f3234;
+            padding: rem(12px) rem(20px);
+            width: 100%;
+            border: rem(2px) solid transparent;
+            outline: none;
+            box-sizing: border-box;
+
+            &:focus {
+                border: rem(2px) solid $yellow;
+            }
+        }
+
+        &-textarea {
+            margin-right: 0;
+            height: rem(133px);
+            resize: none;
+        }
+
+        &-radio {
+            display: none;
+        }
+
+        &-checkbox {
+            display: none;
+        }
+
+        &-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $red;
+            border-radius: rem(4px);
+            min-width: rem(97px);
+            min-height: rem(35px);
+            transition: .5s;
+            border: none;
+            outline: none;
+            text-transform: uppercase;
+            color: $white;
+            font-size: rem(13px);
+            font-weight: 700;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($red, 5%);
+            }
+
+            &-reset {
+                background-color: transparent;
+                text-transform: none;
+                font-weight: 300;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+input[type="radio"]:checked + .form__column-row-label-radio:after {
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked + .form__column-row-label-checkbox:after {
+    opacity: 1;
+}
