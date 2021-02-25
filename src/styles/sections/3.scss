@@ -82,6 +82,7 @@
                     left: auto;
                     width: rem(100px);
                     height: rem(100px);
+                    border-radius: rem(5px);
                 }
             }
 
@@ -171,6 +172,10 @@
                 @include tablets {
                     text-align: center;
                     margin-top: rem(36px);
+                }
+
+                @include phones {
+                    font-size: rem(50px);
                 }
             }
 

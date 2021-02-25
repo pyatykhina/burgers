@@ -40,6 +40,9 @@ export function onePageScroll () {
     }
 
     const scrollDown = () => {
+        if (window.screen.width <= 992 && document.getElementById('menuContent').style.display == 'flex') {
+            return;
+        }
         if (reqSection < sections.length-1) {
             reqSection+=1;
             makeScroll(reqSection);

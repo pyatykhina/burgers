@@ -5,7 +5,7 @@ section.section.hero.activeSection
                 a.header__logo-link(href='' data-goto='0')
                     img.header__logo-img(src='images/1/logo.png')
             nav.header__nav
-                ul.header__menu
+                ul.header__menu#menuContent
                     li.header__menu-item
                         a.header__menu-item-link(href='' data-goto='1') о нас
                     li.header__menu-item
@@ -22,7 +22,8 @@ section.section.hero.activeSection
                 .header__buttons-button
                     a.header__buttons-button-link(href='' data-goto='6') заказать
                 .header__buttons-burger
-                    img.header__buttons-burger-img(src='images/1/menu.png')
+                    img.header__buttons-burger-img#menuTriggerOpen(src='images/1/open.png')
+                    img.header__buttons-burger-img#menuTriggerClose(src='images/1/close.png')
         .hero__content
             img.hero__content-img(src='images/1/burger.png')
             .hero__content-description
