@@ -2,10 +2,12 @@
     background-image: url('images/4/background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative; 
+    background-position: center;
+    position: relative;
 
     &__container {
         width: 100vw;
+        max-width: 100vw;
     }
 }
 
@@ -18,6 +20,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include tablets {
+        width: 100%;
+        text-align: center;
+    }
 
     &-title {
         @include header($yellow);
@@ -38,6 +45,11 @@
                 margin-bottom: rem(10px);
                 cursor: pointer;
 
+                @include tablets {
+                    justify-content: center;
+                    margin-left: rem(-25px);
+                }
+
                 &:before{
                     content: ' ';
                     height: 0;
@@ -56,8 +68,19 @@
                 overflow: hidden;
                 transition: .5s;
 
+                @include tablets {
+                    flex-direction: column;
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
+
                 &-avatar {
                     margin-right: rem(15px);
+
+                    @include tablets {
+                        margin-right: 0;
+                        margin-bottom: rem(5px);
+                    }
                 }
 
                 &-text {

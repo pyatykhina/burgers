@@ -11,18 +11,31 @@
     position: absolute;
     top: 0;
     transition: 1.3s;
+    max-width: 100%;
+
+    @include phones {
+        min-height: auto;
+        max-height: 100vh;
+    }
 }
 
 .section {
     height: 100%;
     min-height: 650px;
-    min-width: 960px; 
+    width: 100%;
     background-color: $dark;
+    overflow: hidden;
+
+    @include phones {
+        min-height: auto;
+        max-height: 100vh;
+    }
 }
 
 .container {
-    width: 960px;
     height: 100%;
+    width: 90%;
+    max-width: 940px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -46,6 +59,10 @@
         &-round {
             @include round(6px, $white);
         }
+    }
+
+    @include phones {
+        display: none;
     }
 }
 

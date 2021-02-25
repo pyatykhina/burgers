@@ -20,6 +20,7 @@
         display: flex;
         position: absolute;
         height: 100%;
+        max-width: 100%;
         top: 0;
         right: 0;
 
@@ -38,6 +39,7 @@
             
             &-trigger {
                 height: 100%;
+                width: rem(80px);
                 min-width: rem(80px);
                 display: block;
                 @include header($white);
@@ -66,6 +68,10 @@
                 font-weight: 300;
                 color: $white;
                 background-color: rgba($dark, 0.9);
+
+                @include phones {
+                    padding: 5%;
+                }
             }
         }
     }

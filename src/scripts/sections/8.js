@@ -38,7 +38,7 @@ const placemarks = [
 export function init () {
     const map = new ymaps.Map('map', {
         center: [59.938936, 30.314466],
-        zoom: 12,
+        zoom: 11,
         controls: ['zoomControl'],
         behaviors: ['drag']
     });

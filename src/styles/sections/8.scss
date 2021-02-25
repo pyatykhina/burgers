@@ -43,6 +43,7 @@
         background-size: cover;
 
         min-height: rem(80px);
+        padding: rem(20px) 0;
         width: 100%;
         position: absolute;
         bottom: 0;
@@ -55,6 +56,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @include maxi-tablets {
+                width: 90%;
+            }
+
+            @include phones {
+                flex-direction: column;
+            }
             
             &-destination {
                 &-address {
@@ -70,6 +79,11 @@
                     color: $red;
                     display: flex;
                     align-items: center;
+
+                    @include phones {
+                        justify-content: center;
+                        margin-bottom: rem(20px);
+                    }
     
                     &:before{
                         content: ' ';
@@ -89,6 +103,10 @@
                     height: rem(22px);
                     width: rem(22px);
                     transition: .3s;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
 
                     &:hover {
                         fill: $white;

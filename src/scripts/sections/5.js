@@ -17,7 +17,9 @@ export function horizontalAccordeon () {
                     e.style.color = '#fff'
                 });
                 item.classList.add('menu-accordeon-active');
-                item.lastElementChild.style.width = '33.75rem';
+                window.screen.width > 768 
+                    ? item.lastElementChild.style.width = '33.75rem'
+                    : item.lastElementChild.style.width = 'calc(100vw - 15rem)'
                 trigger.style.color = '#f8b43a';
             } else {
                 item.classList.remove('menu-accordeon-active');

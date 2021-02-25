@@ -10,15 +10,25 @@
 
         &-left {
             left: -5%;
+
+            @include tablets {
+                left: 0;
+                z-index: 999;
+            }
         }
 
         &-right {
             right: -5%;
+
+            @include tablets {
+                right: 0;
+                z-index: 999;
+            }
         }
     }
 
     &__slider {
-        min-width: 100%;
+        width: 100%;
         height: 100%;
         overflow: hidden;
         position: relative;
@@ -26,6 +36,7 @@
 }
 
 .burgers__list {
+    width: 100%;
     height: 100%;
     display: flex;
     position: absolute;
@@ -36,11 +47,21 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 960px;
+        min-width: 100%;
+
+        @include tablets {
+            flex-direction: column;
+            padding: rem(70px) rem(100px) 0 rem(100px);
+            margin: auto;
+        }
 
         &-left {
             flex-basis: 50%;
             position: relative;
+
+            &-img {
+                max-width: 100%;
+            }
 
             &-composition {
                 position: absolute;
@@ -55,6 +76,13 @@
                 justify-content: center;
                 cursor: pointer;
                 transition: .3s;
+
+                @include phones {
+                    right: 85%;
+                    left: auto;
+                    width: rem(100px);
+                    height: rem(100px);
+                }
             }
 
             &-dropdown {
@@ -67,6 +95,12 @@
                 display: none;
                 transition: .3s;
                 flex-direction: column;
+
+                @include phones {
+                    top: rem(-100px);
+                    left: rem(28px);
+                    padding: rem(10px);
+                }
 
                 &-item {
                     display: flex;
@@ -106,16 +140,38 @@
                 position: absolute;
                 top: 100%;
                 left: 0;
+
+                @include tablets {    
+                    bottom: 100%;
+                    left: auto;
+                    top: auto;
+                    right: 0;
+                }
+
+                @include phones {
+                    left: 85%;
+                }
             }
         }
         
         &-right {
             flex-basis: 50%;
 
+            @include tablets {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             &-title {
                 @include header ($white);
                 line-height: 1;
                 margin-bottom: rem(36px);
+
+                @include tablets {
+                    text-align: center;
+                    margin-top: rem(36px);
+                }
             }
 
             &-description {
@@ -124,6 +180,10 @@
                 line-height: 1.71;
                 color: $white;
                 margin-bottom: rem(36px);
+
+                @include tablets {
+                    text-align: center;
+                }
             }
 
             &-order {

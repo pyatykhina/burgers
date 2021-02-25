@@ -15,11 +15,24 @@
     &-title {
         @include header($yellow);
         margin-bottom: rem(50px);
+
+        @include tablets {
+            line-height: 1.12;
+            margin-bottom: rem(25px);
+        }
+
+        @include phones {
+            font-size: rem(50px);;
+        }
     }
 
     &-main {
         display: flex;
-        flex-direction: row;
+
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
@@ -28,10 +41,23 @@
     flex-direction: column;
     width: 50%;
 
+    @include tablets {
+        width: 75%;
+    }
+
+    @include phones {
+        margin-left: rem(20px);
+        width: 100%;
+    }
+
     &-row {
         display: flex;
         width: 100%;
         margin-bottom: rem(18px);
+
+        @include phones {
+            justify-content: center;
+        }
 
         &-item {
             display: flex;
@@ -50,6 +76,7 @@
                 position: relative;
                 display: flex;
                 align-items: center;
+                flex-wrap: nowrap;
                 margin-right: rem(25px);
                 margin-top: rem(7px);
 
@@ -101,7 +128,8 @@
                     content:'';
                     width: rem(15px);
                     height: rem(15px);
-                    background: url('images/7/checkbox.png') center center no-repeat;                    display: inline-block;
+                    background: url('images/7/checkbox.png') center center no-repeat;                    
+                    display: inline-block;
                     position: absolute;
                     opacity: 0;
                     cursor: pointer;
@@ -112,6 +140,7 @@
         &-input {
             border: none;
             border-radius: rem(5px);
+            font: inherit;
             font-weight: 300;
             font-size: rem(14px);
             color: #2f3234;

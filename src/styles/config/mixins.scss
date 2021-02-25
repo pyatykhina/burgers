@@ -11,4 +11,29 @@
     font-weight: normal;
     color: $color;
     line-height: 1.42;
+    text-align: center;
+}
+
+@mixin maxi-tablets {
+    @media screen and (max-width: $maxi-tablets) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin mini-phones {
+    @media screen and (max-width: $mini-phones) {
+        @content;
+    }
 }

@@ -3,7 +3,7 @@ section.section.hero.activeSection
         header.header
             .header__logo
                 a.header__logo-link(href='' data-goto='0')
-                    img.hero__logo-img(src='images/1/logo.png')
+                    img.header__logo-img(src='images/1/logo.png')
             nav.header__nav
                 ul.header__menu
                     li.header__menu-item
@@ -18,11 +18,13 @@ section.section.hero.activeSection
                         a.header__menu-item-link(href='' data-goto='5') отзывы
                     li.header__menu-item  
                         a.header__menu-item-link(href='' data-goto='7') контакты  
-            .header__button
-                a.header__button-link(href='' data-goto='6') заказать
+            .header__buttons
+                .header__buttons-button
+                    a.header__buttons-button-link(href='' data-goto='6') заказать
+                .header__buttons-burger
+                    img.header__buttons-burger-img(src='images/1/menu.png')
         .hero__content
-            .hero__content-img
-                img(src='images/1/burger.png')
+            img.hero__content-img(src='images/1/burger.png')
             .hero__content-description
                 h2.hero__content-description-title Мы делаем
                 h3.hero__content-description-subtitle натуральные бургеры

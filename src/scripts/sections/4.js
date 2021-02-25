@@ -14,7 +14,9 @@ export function verticalAccordeon () {
                     e.lastElementChild.style.height = '0';
                 })
                 item.classList.add('team-accordeon-active');
-                item.lastElementChild.style.height = item.lastElementChild.scrollHeight*2 + 'px';
+                window.screen.width > 768 
+                    ? item.lastElementChild.style.height = item.lastElementChild.scrollHeight*2 + 'px'
+                    : item.lastElementChild.style.height = item.lastElementChild.scrollHeight + 'px'
             } else {
                 item.classList.remove('team-accordeon-active');
                 item.lastElementChild.style.height = '0'
