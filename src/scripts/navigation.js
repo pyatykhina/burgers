@@ -92,4 +92,30 @@ export function onePageScroll () {
             makeScroll(reqSection);
         })
     })
+
+    // touch screens   
+    let yDown = null;
+
+    document.addEventListener('touchstart', function(e) {
+        if (inScroll) {
+            return;
+        }
+        const firstTouch = e.touches[0];       
+                                    
+        yDown = firstTouch.clientY; 
+    });
+
+    document.addEventListener('touchmove', function(e) {
+        if (inScroll) {
+            return;
+        }                                
+        let yUp = e.touches[0].clientY;
+        let yDiff = yDown - yUp;
+
+        if (yDiff >= 0) {
+            scrollDown();
+        } else {
+            scrollUp();
+        }
+    });
 }
