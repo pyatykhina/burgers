@@ -92,6 +92,11 @@ function scripts() {
         .pipe(gulp.dest(paths.root))
 }
 
+gulp.task('build', gulp.series(
+    clear,
+    gulp.parallel(styles, templates, images, fonts, scripts)
+))
+
 gulp.task('default', gulp.series(
     clear,
     gulp.parallel(styles, templates, images, fonts, scripts),
